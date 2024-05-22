@@ -25,7 +25,7 @@ export default class FlatCard extends Component {
 const styles = StyleSheet.create({
     heading:{
         fontSize: 30,
-        color: '#000',
+        fontWeight:"bold",
         paddingHorizontal:8
     },
     container: {
