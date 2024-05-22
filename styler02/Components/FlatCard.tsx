@@ -4,24 +4,51 @@ import React, { Component } from 'react'
 export default class FlatCard extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.text}>FlatCard</Text>
+      <View>
+        <Text style={styles.heading}>FlatCard</Text>
+        <View style={styles.container}>
+            <View style={[styles.card,styles.cardone]} >
+                <Text>Red</Text>
+            </View>
+            <View style={[styles.card,styles.cardTwo]} >
+                <Text>Blue</Text>
+            </View>
+            <View style={[styles.card,styles.cardThree]} >
+                <Text>Green</Text>
+            </View>
+        </View>
       </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-
-    },
-    text: {
+    heading:{
         fontSize: 30,
-        fontWeight: 'bold',
-        color: '#000'
+        color: '#000',
+        paddingHorizontal:8
+    },
+    container: {
+       flexDirection: 'row',
+       padding:8,
+    },
+    card: {
+        flex:1,
+        justifyContent: 'center',
+        alignItems:"center",
+        width:100,
+        height:100,
+        margin:10,
+        borderRadius:5,
+        
+    },
+    cardone: {
+        backgroundColor:'red'
+    },
+    cardTwo: {
+        backgroundColor:'blue'
+    },
+    cardThree: {
+        backgroundColor:'green'
     }
 })

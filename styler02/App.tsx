@@ -7,7 +7,6 @@ const App = () => {
     <SafeAreaView>
       <ScrollView>
     <FlatCard/>
-    <Text >Hello</Text>
     </ScrollView>
     </SafeAreaView>
   )
