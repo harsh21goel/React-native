@@ -7,7 +7,7 @@ export default function ActionCard() {
     }
   return (
     <View>
-      <Text>Blog Card</Text>
+      <Text style={styles.headingtext}>Blog Card</Text>
       <View style={styles.Card}>
             <View style={styles.HeaderContainer}>
                 <Text style={styles.HeaderText}>Lets Learn about React-Native</Text>
@@ -18,9 +18,8 @@ export default function ActionCard() {
                 }}
                 />
             <View style={styles.BodyContainer}>
-                <Text style={styles.BodyText}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatem, quaerat.
+                <Text style={styles.BodyText} numberOfLines={2}>
+                React Native lets you create truly native apps and doesn't compromise your users' experiences. It provides a core set of platform agnostic native components like View, Text, and Image that map directly to the platform's native UI building blocks.
                 </Text>
             </View>
             <View style={styles.FooterContainer}>
@@ -41,14 +40,52 @@ export default function ActionCard() {
 }
 
 const styles = StyleSheet.create({
-    Card:{},
-    HeaderContainer:{},
-    HeaderText:{},
-    CardImage:{
-        height:150
+    headingtext:{
+        fontSize:30,
+        fontWeight:"bold",
+        paddingHorizontal:8
     },
-    BodyContainer:{},
-    BodyText:{},
-    FooterContainer:{},
-    FooterText:{},
+    Card:{
+        width:350,
+        height:340,
+        backgroundColor:"#ffffff",
+        marginHorizontal:20,
+        marginVertical:10,
+        borderRadius:5,
+       
+    },
+    HeaderContainer:{
+        padding:10,
+        justifyContent:"center",
+        alignItems:"center"
+    },
+    HeaderText:{
+        color:"#000000",
+        fontSize:20,
+        fontWeight:"600"
+    },
+    CardImage:{
+        height:190
+    },
+    BodyContainer:{
+
+    },
+    BodyText:{
+        padding:10,
+        fontSize:15,
+        color:"#000000"
+    },
+    FooterContainer:{
+        flexDirection:"row",
+        justifyContent:"space-between",
+        paddingHorizontal:10,
+        paddingVertical:10,
+        borderTopWidth:1,
+        borderTopColor:"#000000"
+    },
+    FooterText:{
+        color:"#034afc",
+        fontSize:15,
+        fontWeight:"600",
+    },
 })
